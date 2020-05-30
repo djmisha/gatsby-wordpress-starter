@@ -1,9 +1,10 @@
 import React from "react"
 
 const NavigationMain = () => {
-  const theMenu = "Menu"
+  const theMenu = "Home | About"
   return (
     <div
+      className="main-nav"
       style={{
         fontSize: "14px",
         color: "#FFFFFF",

@@ -11,11 +11,10 @@ export default function Blog({ data }) {
       <h1>Blog</h1>
       {data.allWordpressPost.edges.map(({ node }) => (
         <div>
-          <h2>
-            <Link>{node.title}</Link>
-          </h2>
-          <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-          <a href={node.slug}>Read More</a>
+          <Link>
+            <h2>{node.title}</h2>
+            <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+          </Link>
         </div>
       ))}
     </Layout>

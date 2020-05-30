@@ -1,6 +1,6 @@
+import React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
 import NavigationMain from "./navigation-main"
 
 const Header = ({ siteTitle }) => (
@@ -8,11 +8,11 @@ const Header = ({ siteTitle }) => (
     style={{
       background: `#ee6c4d`,
       marginBottom: `1.45rem`,
-
       padding: `20px`,
     }}
   >
     <div
+      className="navigation-bar"
       style={{
         display: "flex",
         justifyContent: "space-between",
@@ -21,7 +21,7 @@ const Header = ({ siteTitle }) => (
         margin: "0 auto",
       }}
     >
-      <span style={{ margin: 0 }}>
+      <div className="logo" style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
@@ -31,7 +31,7 @@ const Header = ({ siteTitle }) => (
         >
           {siteTitle}
         </Link>
-      </span>
+      </div>
       <NavigationMain />
     </div>
   </header>
