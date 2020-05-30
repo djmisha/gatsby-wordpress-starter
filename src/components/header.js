@@ -1,19 +1,24 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import NavigationMain from "./navigation-main"
 
 const Header = ({ siteTitle }) => (
   <header
     style={{
       background: `#ee6c4d`,
       marginBottom: `1.45rem`,
+
+      padding: `20px`,
     }}
   >
     <div
       style={{
-        margin: `0 auto`,
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
         maxWidth: 1080,
-        padding: `20px`,
+        margin: "0 auto",
       }}
     >
       <span style={{ margin: 0 }}>
@@ -27,6 +32,7 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </span>
+      <NavigationMain />
     </div>
   </header>
 )

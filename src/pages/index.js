@@ -7,9 +7,13 @@ import SEO from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <SEO title="Web Design" />
-    <h1>Web Design and Development </h1>
-    <p>Performant serverless websites using the jamstack.</p>
-    <Link to="/about/">About Us</Link>
+    <h1>Web Design and Development</h1>
+    <p>Performant websites using the jamstack.</p>
+    <button>Learn More</button>
+    <div>
+      <Link to="/blog/">Blog</Link> <Link to="/about/">About</Link>{" "}
+      <Link to="/sitemap/">Sitemap</Link>
+    </div>
   </Layout>
 )
 
