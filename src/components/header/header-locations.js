@@ -1,6 +1,6 @@
 import React from "react"
-import FooterCopyright from "./footer-copyright"
-import FooterSignature from "./footer-signature"
+import FooterCopyright from "../footer/footer-copyright"
+import FooterSignature from "../footer/footer-signature"
 
 const Footer = () => {
   return (

@@ -1,17 +1,12 @@
 import React from "react"
 import FooterCopyright from "./footer-copyright"
 import FooterSignature from "./footer-signature"
+import Contact from "../utils/contact"
 
 const Footer = () => {
   return (
-    <footer
-      style={{
-        margin: `0 auto`,
-        maxWidth: 1080,
-        textAlign: "center",
-        fontSize: `.8em`,
-      }}
-    >
+    <footer className="footer">
+      <Contact />
       <FooterCopyright />
       <FooterSignature />
     </footer>

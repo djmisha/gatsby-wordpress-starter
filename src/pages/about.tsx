@@ -2,9 +2,9 @@
 import React from "react"
 import { PageProps, Link } from "gatsby"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Layout from "../components/layouts/layout"
+import Image from "../components/utils/image"
+import SEO from "../components/utils/seo"
 
 const SecondPage = (props: PageProps) => (
   <Layout>
