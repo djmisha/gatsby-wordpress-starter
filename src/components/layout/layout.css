@@ -2,7 +2,12 @@
 footer,
 main,
 .logo {
-  display: none;
+  /* display: none; */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
 }
 
 /* html {

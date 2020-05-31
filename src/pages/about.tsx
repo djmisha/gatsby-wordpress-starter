@@ -2,7 +2,7 @@
 import React from "react"
 import { PageProps, Link } from "gatsby"
 
-import Layout from "../components/layouts/layout"
+import Layout from "../components/layout/layout"
 import Image from "../components/utils/image"
 import SEO from "../components/utils/seo"
 
