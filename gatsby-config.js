@@ -71,8 +71,8 @@ module.exports = {
         perPage: 100,
         // Search and Replace Urls across WordPress content.
         searchAndReplaceContentUrls: {
-          sourceUrl: "https://asburymediagroup.com",
-          replacementUrl: "http://localhost:8080",
+          // sourceUrl: "https://asburymediagroup.com",
+          // replacementUrl: "http://localhost:8000",
         },
         // Set how many simultaneous requests are sent at once.
         concurrentRequests: 10,

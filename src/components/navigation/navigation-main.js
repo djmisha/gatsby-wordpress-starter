@@ -18,11 +18,8 @@ const NavigationMain = ({}) => {
       }
     }
   `)
-  console.log(data.allWordpressMenusMenusItems.edges[0].node.items[0])
-  const menuItems = data.allWordpressMenusMenusItems.edges[0].node.items
-  console.log(menuItems[0].url)
   return (
-    <nav className="menu">
+    <nav className="navigation-main">
       <ul className="nav flex-column">
         {data &&
           data.allWordpressMenusMenusItems &&

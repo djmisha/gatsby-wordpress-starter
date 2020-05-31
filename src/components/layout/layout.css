@@ -10,7 +10,11 @@ nav ul {
   display: flex;
 }
 
-/* html {
+nav ul li {
+  padding: 0 10px;
+}
+
+html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -648,4 +652,4 @@ pre tt:after {
   html {
     font-size: 100%;
   }
-} */
+}
