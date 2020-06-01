@@ -20,7 +20,7 @@ const NavigationMain = ({}) => {
   `)
   return (
     <nav className="navigation-main">
-      <ul className="nav flex-column">
+      <ul>
         {data &&
           data.allWordpressMenusMenusItems &&
           data.allWordpressMenusMenusItems.edges &&

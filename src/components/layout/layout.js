@@ -35,8 +35,8 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <Footer info={data} />
       </div>
+      <Footer info={data} />
     </>
   )
 }

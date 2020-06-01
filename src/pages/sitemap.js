@@ -1,7 +1,7 @@
 import React from "react"
-
 import Layout from "../components/layout/layout"
 import SEO from "../components/utils/seo"
+import { Link } from "gatsby"
 
 export default function Sitemap({ data }) {
   return (
@@ -10,9 +10,10 @@ export default function Sitemap({ data }) {
       <h1>Sitemap</h1>
       {data.allWordpressPage.edges.map(({ node }) => (
         <div>
-          <h2>{node.title}</h2>
-          <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-          <a href={node.slug}>Read More</a>
+          <Link to={node.slug}>
+            <h2>{node.title}</h2>
+            <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+          </Link>
         </div>
       ))}
     </Layout>

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Asbury Media Group`,
-    description: `Build your next website using the latest technolody with Asbury Media Group `,
+    description: `Website development agency in San Diego.  Creating user focused websites and applications. `,
     author: `asburymediagroup.com`,
   },
   plugins: [
@@ -71,8 +71,9 @@ module.exports = {
         perPage: 100,
         // Search and Replace Urls across WordPress content.
         searchAndReplaceContentUrls: {
-          // sourceUrl: "https://asburymediagroup.com",
+          sourceUrl: "https://asburymediagroup.com",
           // replacementUrl: "http://localhost:8000",
+          replacementUrl: "https://peaceful-lichterman-a07c3f.netlify.app/",
         },
         // Set how many simultaneous requests are sent at once.
         concurrentRequests: 10,

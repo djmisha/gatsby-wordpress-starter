@@ -13,13 +13,11 @@ const FooterCopyright = ({ siteTitle }) => {
     }
   `)
   return (
-    <div>
-      © {new Date().getFullYear()}, {data.site.siteMetadata.title} | {` `}
-      <a href="https://www.asburymediagroup.com">Privacy Policy</a>
-      {` `} | {` `}
-      <a href="https://www.asburymediagroup.com">Sitemap</a>
-      <Link to="/blog/">Blog</Link> <Link to="/about/">About</Link>{" "}
-      <Link to="/sitemap/">Sitemap</Link>
+    <div className="footer-copyright">
+      © {new Date().getFullYear()}, {data.site.siteMetadata.title}
+      {/* | {` `} */}
+      {/* <Link to="/privacy-policy/">Privacy Policy</Link> */}
+      {` `} | {` `} <Link to="/sitemap/">Sitemap</Link>
     </div>
   )
 }

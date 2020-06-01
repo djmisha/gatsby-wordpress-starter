@@ -1,5 +1,4 @@
 import React from "react"
-
 import Layout from "../components/layout/layout"
 import SEO from "../components/utils/seo"
 import { Link } from "gatsby"
@@ -11,7 +10,7 @@ export default function Blog({ data }) {
       <h1>Blog</h1>
       {data.allWordpressPost.edges.map(({ node }) => (
         <div>
-          <Link>
+          <Link to={node.slug}>
             <h2>{node.title}</h2>
             <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
           </Link>
