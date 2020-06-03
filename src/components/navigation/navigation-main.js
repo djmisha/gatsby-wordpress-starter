@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-const NavigationMain = ({}) => {
+const NavigationMain = () => {
   const data = useStaticQuery(graphql`
     {
       allWordpressMenusMenusItems(filter: { name: { eq: "Main Navigation" } }) {

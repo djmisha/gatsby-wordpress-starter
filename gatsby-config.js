@@ -3,10 +3,14 @@ module.exports = {
     title: `Asbury Media Group`,
     description: `Website development agency in San Diego.  Creating user focused websites and applications. `,
     author: `asburymediagroup.com`,
+    phone: "530 680 1525",
+    locationaddress: "720 Asbury Court",
+    locationcity: "San Diego, CA 92109",
   },
   plugins: [
     {
       resolve: "gatsby-source-wordpress",
+
       options: {
         /*
          * The base URL of the WordPress site without the trailingslash and the protocol. This is required.
@@ -72,8 +76,8 @@ module.exports = {
         // Search and Replace Urls across WordPress content.
         searchAndReplaceContentUrls: {
           sourceUrl: "https://asburymediagroup.com",
-          // replacementUrl: "http://localhost:8000",
-          replacementUrl: "https://peaceful-lichterman-a07c3f.netlify.app/",
+          replacementUrl: "http://localhost:8000",
+          // replacementUrl: "https://peaceful-lichterman-a07c3f.netlify.app/",
         },
         // Set how many simultaneous requests are sent at once.
         concurrentRequests: 10,
@@ -129,6 +133,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

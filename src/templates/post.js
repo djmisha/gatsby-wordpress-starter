@@ -4,12 +4,13 @@ import { graphql } from "gatsby"
 
 export default function BlogPost({ data }) {
   const post = data.allWordpressPost.edges[0].node
-  console.log(post)
+  // console.log(post)
   return (
     <Layout>
       <div>
         <h1>{post.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        <div dangerouslySetInnerHTML={{ __html: post.date }} />
       </div>
     </Layout>
   )
@@ -19,8 +20,10 @@ export const query = graphql`
     allWordpressPost(filter: { slug: { eq: $slug } }) {
       edges {
         node {
+          id
           title
           content
+          date
         }
       }
     }

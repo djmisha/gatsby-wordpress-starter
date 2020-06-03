@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 
 export default function BlogPost({ data }) {
   const post = data.allWordpressPage.edges[0].node
-  console.log(post)
+  // console.log(post)
   return (
     <Layout>
       <div>
