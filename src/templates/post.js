@@ -4,13 +4,18 @@ import { graphql } from "gatsby"
 
 export default function BlogPost({ data }) {
   const post = data.allWordpressPost.edges[0].node
-  // console.log(post)
   return (
     <Layout>
       <div>
-        <h1>{post.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.content }} />
-        <div dangerouslySetInnerHTML={{ __html: post.date }} />
+        <h1 className="post-title">{post.title}</h1>
+        <div
+          className="post-content"
+          dangerouslySetInnerHTML={{ __html: post.content }}
+        />
+        <div
+          className="post-date"
+          dangerouslySetInnerHTML={{ __html: post.date }}
+        />
       </div>
     </Layout>
   )
@@ -23,7 +28,7 @@ export const query = graphql`
           id
           title
           content
-          date
+          date(formatString: "MMMM DD, YYYY")
         }
       }
     }

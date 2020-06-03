@@ -1,3 +1,136 @@
-// @import "_reset";
-// @import "./variables";
-// @import "./base";
+@import "mixins";
+@import "variables";
+@import "base";
+
+body {
+  margin: 0;
+  padding: 0;
+  //   font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.site-logo {
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+.navigation-bar {
+  padding: 10px 20px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eee;
+}
+
+.menu-toggle {
+  background-color: #000;
+  border: none;
+  padding: 10px;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.main-nav-closed {
+  display: none;
+}
+.main-nav-open {
+  display: block;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  color: white;
+  padding-top: 80px;
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5em;
+    line-height: 2.5em;
+    text-transform: uppercase;
+  }
+}
+
+main {
+  //   padding: 20px;
+}
+
+/* Footer */
+
+footer {
+  background-color: #eee;
+  color: black;
+  padding: 20px;
+  //   font-size: 0.7em;
+  //   line-height: 1em;
+  text-align: center;
+  a {
+    color: black;
+  }
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+footer #contact-form {
+  margin-bottom: 40px;
+  max-width: 680px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 120px;
+
+  label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  input,
+  input.button,
+  textarea {
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: none;
+    padding: 10px 0px;
+  }
+  input.button {
+    width: 100%;
+    padding: 10px 10px;
+    border: 1px solid black;
+    margin-top: 20px;
+    background-color: #000;
+    color: white;
+  }
+}
+
+footer .location-info {
+  margin-bottom: 80px;
+}
+
+/* Homeoage */
+
+.home-hero {
+  height: calc(100vh - 60px);
+  max-height: 800px;
+  background-color: violet;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

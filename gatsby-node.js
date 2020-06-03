@@ -4,34 +4,12 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
+import queryAll from "./src/queries/queryAll"
+
 const path = require(`path`)
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
-  return graphql(`
-    {
-      allWordpressPost(sort: { fields: [date] }) {
-        edges {
-          node {
-            title
-            excerpt
-            content
-            slug
-          }
-        }
-      }
-      allWordpressPage {
-        edges {
-          node {
-            id
-            title
-            excerpt
-            slug
-            date(formatString: "MMMM DD, YYYY")
-          }
-        }
-      }
-    }
-  `).then(result => {
+  return graphql(queryAll).then(result => {
     result.data.allWordpressPost.edges.forEach(({ node }) => {
       createPage({
         path: node.slug,

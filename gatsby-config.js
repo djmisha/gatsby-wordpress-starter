@@ -4,8 +4,13 @@ module.exports = {
     description: `Website development agency in San Diego.  Creating user focused websites and applications. `,
     author: `asburymediagroup.com`,
     phone: "530 680 1525",
+    phonelink: "tel:+1 530 680 1525",
+    fax: "530 680 1525",
     locationaddress: "720 Asbury Court",
     locationcity: "San Diego, CA 92109",
+    maplink: "#GoogleMapLink",
+    /* Update to Array for Multiple Locations */
+    locations: [{ name: "Location Name", address: "address" }],
   },
   plugins: [
     {

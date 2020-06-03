@@ -30,7 +30,7 @@ const Contact = props => (
         <label htmlFor="message">Message</label>
         <textarea name="message" id="message" rows="6" required></textarea>
       </div>
-      <div className="field-button">
+      <div className="field">
         <input type="submit" value="Send" className="button" />
       </div>
     </form>

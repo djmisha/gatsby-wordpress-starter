@@ -8,7 +8,7 @@ const Footer = ({ siteData }) => {
   // console.log(querydata)
   console.log(siteData)
   return (
-    <footer className="footer">
+    <footer className="site-footer">
       <Contact />
       <Location siteData={siteData} />
       <FooterCopyright siteData={siteData} />

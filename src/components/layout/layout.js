@@ -12,6 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "../header/header"
 import "../../styles/styles.scss"
 import Footer from "../footer/footer"
+import { Helmet } from "react-helmet"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -29,13 +30,16 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{data.site.siteMetadata.title}</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div className="main-content">
-        <main>{children}</main>
-      </div>
+      <main className="site-content">{children}</main>
       <Footer siteData={data} />
-    </>
+    </div>
   )
 }
 
