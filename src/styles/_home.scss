@@ -1,0 +1,43 @@
+.home-hero {
+  height: calc(100vh - 60px);
+  //   max-height: 800px;
+  background-color: #000;
+  display: flex;
+  //   display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  p {
+    color: #fff;
+    &:nth-of-type(1) {
+      font-size: 2.3em;
+      line-height: 1em;
+    }
+    &:nth-of-type(2) {
+      font-size: 1.1em;
+    }
+  }
+}
+
+.home-about {
+  padding: 80px 20px;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 1.4em;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #000;
+  border-bottom: 1px solid #eee;
+}
+
+.home-technology {
+  padding: 40px 20px;
+  //   border: 1px solid pink;
+  @include media($tablet) {
+    display: flex;
+    > div {
+      width: 50%;
+    }
+  }
+}

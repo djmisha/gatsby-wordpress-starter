@@ -111,16 +111,16 @@ blockquote {
   }
 }
 
-section,
-main,
-.contain {
-  // border: 1px solid pink;
-  padding: 20px;
-  @include media($desktop) {
-    padding: 20px 40px;
-    padding: 20px 40px;
-  }
-  @include media($full) {
-    @include contain($full, 20px);
-  }
-}
+// section,
+// main,
+// .contain {
+//   // border: 1px solid pink;
+//   padding: 20px;
+//   @include media($desktop) {
+//     padding: 20px 40px;
+//     padding: 20px 40px;
+//   }
+//   @include media($full) {
+//     @include contain($full, 20px);
+//   }
+// }

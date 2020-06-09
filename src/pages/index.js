@@ -1,20 +1,36 @@
 import React from "react"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/utils/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Web Design" />
-    <div className="home-hero">
-      <h1>Web Design and Development</h1>
-      <p>Performant websites using the jamstack.</p>
-      <button>Learn More</button>
-    </div>
-    <div className="home-about"></div>
-    <div className="home-services"></div>
-    <div className="home-testimonials"></div>
-  </Layout>
-)
+const IndexPage = ({ data }) => {
+  // console.log(data.allWordpressPage.edges[0].node)
+  const page = data.allWordpressPage.edges[0].node
+  return (
+    <Layout>
+      <SEO title={page.title} />
+      <div
+        className="home-content"
+        dangerouslySetInnerHTML={{ __html: page.content }}
+      ></div>
+    </Layout>
+  )
+}
+
+export const query = graphql`
+  {
+    allWordpressPage(filter: { slug: { eq: "home-new" } }) {
+      edges {
+        node {
+          id
+          title
+          slug
+          content
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage
