@@ -25,13 +25,24 @@ body {
   background-color: #eee;
 }
 
-.menu-toggle {
-  background-color: #000;
+.toggle-open,
+.toggle-closed {
+  z-index: 9999;
   border: none;
   padding: 10px;
-  color: #fff;
   font-size: 16px;
   text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  border-radius: 0;
+}
+
+.toggle-open {
+  background-color: #fff;
+  color: #000;
+}
+
+.toggle-open {
 }
 
 .main-nav-closed {
@@ -40,7 +51,7 @@ body {
 .main-nav-open {
   display: block;
   position: fixed;
-  top: 60px;
+  top: 0px;
   left: 0;
   right: 0;
   bottom: 0;

@@ -8,23 +8,34 @@ class Header extends React.Component {
     super(props)
     this.state = {
       menuClass: "main-nav-closed",
+      toggleClass: "toggle-closed",
     }
     this.handleMenuChange = this.handleMenuChange.bind(this)
   }
   handleMenuChange() {
-    // console.log(this.state)
+    console.log(this.state)
     const changemenu =
       this.state.menuClass === "main-nav-closed"
         ? "main-nav-open"
         : "main-nav-closed"
-    this.setState({ menuClass: changemenu })
+    const changeToggle =
+      this.state.toggleClass === "toggle-closed"
+        ? "toggle-open"
+        : "toggle-closed"
+    this.setState({
+      menuClass: changemenu,
+      toggleClass: changeToggle,
+    })
   }
   render() {
     return (
       <header className="site-header">
         <div className="navigation-bar">
           <Logo />
-          <button onClick={this.handleMenuChange} className="menu-toggle">
+          <button
+            onClick={this.handleMenuChange}
+            className={this.state.toggleClass}
+          >
             menu
           </button>
           <div className={this.state.menuClass}>

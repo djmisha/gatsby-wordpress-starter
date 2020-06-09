@@ -72,7 +72,7 @@ module.exports = {
         },
         // Set cookies that should be send with requests to WordPress as key value pairs
         cookies: {},
-        // Set verboseOutput to true to display a verbose output on `npm run develop` or `npm run build`
+        // Set verboseOutput to true to display a verbose output on `npm run develop` or `npm run build`t
         // It can help you debug specific API Endpoints problems.
         verboseOutput: false,
         // Set how many pages are retrieved per API request.
@@ -80,8 +80,8 @@ module.exports = {
         // Search and Replace Urls across WordPress content.
         searchAndReplaceContentUrls: {
           sourceUrl: "https://asburymediagroup.com",
-          // replacementUrl: "http://localhost:8000",
-          replacementUrl: "https://peaceful-lichterman-a07c3f.netlify.app/",
+          replacementUrl: "http://localhost:8000",
+          // replacementUrl: "https://peaceful-lichterman-a07c3f.netlify.app/",
         },
         // Set how many simultaneous requests are sent at once.
         concurrentRequests: 10,
