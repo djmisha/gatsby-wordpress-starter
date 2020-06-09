@@ -9,10 +9,11 @@ export default function Sitemap({ data }) {
       <SEO title="Sitemap" />
       <h1>Sitemap</h1>
       {data.allWordpressPage.edges.map(({ node }) => (
-        <div>
+        <div key={node.id}>
+          <h2>{node.title}</h2>
+          <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
           <Link to={node.slug}>
-            <h2>{node.title}</h2>
-            <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+            <button>Read More</button>
           </Link>
         </div>
       ))}

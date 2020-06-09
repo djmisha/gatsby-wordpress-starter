@@ -6,9 +6,11 @@ import Contact from "../utils/contact"
 
 const Footer = ({ siteData }) => {
   // console.log(querydata)
-  console.log(siteData)
+  // console.log(siteData)
+  // console.log(siteData.site.siteMetadata)
   return (
     <footer className="site-footer">
+      {/* <pre>{JSON.stringify(siteData.site.siteMetadata, null, 2)}</pre> */}
       <Contact />
       <Location siteData={siteData} />
       <FooterCopyright siteData={siteData} />
