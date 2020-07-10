@@ -31,6 +31,7 @@ const Layout = ({ children }) => {
 
   return (
     <div>
+      {/* Change this to SE0 Componenet */}
       <Helmet>
         <meta charSet="utf-8" />
         <title>{data.site.siteMetadata.title}</title>

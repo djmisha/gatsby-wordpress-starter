@@ -1,18 +1,25 @@
 .home-hero {
+  // width: calc(100% + 80px);
   height: calc(100vh - 60px);
+  position: relative;
+  // left: -40px;
+  padding: 0 !important;
+  // max-width: none;
   //   max-height: 800px;
-  background-color: #000;
+  // background-color: $primaryColor;
   display: flex;
   //   display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 20px;
+  // padding: 0 80px;
   p {
-    color: #fff;
+    text-transform: uppercase;
+    color: $primaryColor;
     &:nth-of-type(1) {
-      font-size: 2.3em;
-      line-height: 1em;
+      font-size: 3em;
+      margin-bottom: 20px;
+      // line-height: 1em;
     }
     &:nth-of-type(2) {
       font-size: 1.1em;
@@ -41,3 +48,4 @@
     }
   }
 }
+// 

@@ -8,13 +8,13 @@ html {
 
 body {
   color: $defaultcolor;
-  font: 16px/24px $defaultfont;
-  font-weight: $light;
-  line-height: 1.9em;
+  font: 16px/22px $defaultfont;
+  font-weight: normal;
+  // line-height: 1.9em;
   min-width: 320px;
   text-align: center;
   @include media($tablet) {
-    // font: 20px/34px $defaultfont;
+    font: 20px/34px $defaultfont;
   }
   // -moz-osx-font-smoothing: grayscale;
   // -webkit-font-smoothing: antialiased;
@@ -41,8 +41,10 @@ h6,
 .headline {
   font-family: $primaryFont;
   color: $primaryColor;
-  font-weight: $semiBold;
-  text-align: left;
+  // font-weight: $semiBold;
+  font-weight: normal;
+  text-transform: uppercase;
+  // text-align: left;
 }
 
 h2,
@@ -60,7 +62,7 @@ h6 {
 }
 
 h1 {
-  @include font(30px, 1.1em);
+  @include font(25px, 1.1em);
   @include media($tablet) {
     @include font(50px);
   }
@@ -68,9 +70,9 @@ h1 {
 
 h2,
 .headline {
-  @include font(25px);
+  @include font(20px);
   @include media($desktop) {
-    @include font(35px, 1.1em);
+    @include font(30px, 1.1em);
   }
 }
 
@@ -111,16 +113,16 @@ blockquote {
   }
 }
 
-// section,
-// main,
-// .contain {
-//   // border: 1px solid pink;
-//   padding: 20px;
-//   @include media($desktop) {
-//     padding: 20px 40px;
-//     padding: 20px 40px;
-//   }
-//   @include media($full) {
-//     @include contain($full, 20px);
-//   }
-// }
+section,
+main,
+.contain {
+  text-align: left;
+  // border: 1px solid pink;
+  padding:  0 20px;
+  @include media($desktop) {
+    padding: 0px 40px;
+  }
+  @include media($full) {
+    @include contain($full, 20px);
+  }
+}
