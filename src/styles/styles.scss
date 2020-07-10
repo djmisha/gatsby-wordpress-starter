@@ -15,10 +15,11 @@ body {
   a {
     text-align: left;
     display: block;
-    width: 100px;
+    // width: 100px;
     text-decoration: none;
     color:$primaryColor;
-    font-size: 14px;
+    font-family: $highlightFont;
+    // font-size: 14px;
     line-height: 12px;
     text-transform: uppercase;
   }

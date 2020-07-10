@@ -14,6 +14,26 @@ module.exports = {
   },
   plugins: [
     {
+      // Google Fonts 
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Montserrat`,
+            variants: [`400`, `700`],
+          },
+          {
+            family: `Roboto`,
+            variants: [`400`, `700`],
+          },
+          {
+            family: `Galada`,
+            variants: [`400`, `700`],
+          },
+        ],
+      },
+    },
+    {
       resolve: "gatsby-source-wordpress",
       options: {
         /*
