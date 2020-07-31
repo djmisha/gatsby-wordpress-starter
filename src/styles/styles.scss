@@ -14,14 +14,9 @@ body {
 .site-logo {
   a {
     text-align: left;
-    display: block;
-    // width: 100px;
     text-decoration: none;
-    color:$primaryColor;
+    color: $primaryColor;
     font-family: $highlightFont;
-    // font-size: 14px;
-    line-height: 12px;
-    text-transform: uppercase;
   }
 }
 .navigation-bar {
@@ -37,35 +32,58 @@ body {
 .toggle-closed {
   z-index: 9999;
   border: none;
-  padding: 10px;
+  padding: 10px 20px;
   font-size: 14px;
-  border-radius: 5px;
+  font-family: $secondaryFont;
+  border-radius: 25px;
   text-transform: uppercase;
   background-color: $primaryColor;
   color: #fff;
-  border-radius: 5px;
+  // border-radius: 5px;
 }
 
 .toggle-open {
-  background-color: #fff;
-  color: #000;
+  background-color: rgba($color: #fff, $alpha: 0.1);
+  color: rgba($color: #fff, $alpha: 0.4);
 }
 
 .toggle-open {
 }
 
 .main-nav-closed {
-  display: none;
-}
-.main-nav-open {
-  display: block;
+  top: -480px;
+  transition: top 0.22s ease;
   position: fixed;
-  top: 0px;
+  height: 480px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
   background-color: black;
   color: white;
+  height: 400px;
+  z-index: 999;
+  transition: top 0.22s ease;
+}
+
+.main-nav-open {
+  top: 0;
+}
+.main-nav-open,
+.main-nav-closed {
+  display: bl;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  color: white;
+  height: 400px;
+  z-index: 999;
+  transition: top 0.22s ease;
   padding-top: 80px;
   ul {
     list-style: none;
@@ -81,6 +99,8 @@ body {
     font-size: 1.5em;
     line-height: 2.5em;
     text-transform: uppercase;
+    letter-spacing: 0px;
+    transition: all 0.25s ease;
   }
 }
 
@@ -94,8 +114,8 @@ footer {
   background-color: #eee;
   color: black;
   padding: 20px;
-    font-size: 0.8em;
-    line-height: 1.1em;
+  font-size: 0.8em;
+  line-height: 1.1em;
   text-align: center;
   a {
     color: black;
@@ -131,7 +151,7 @@ footer #contact-form {
   input,
   input.button,
   textarea {
-    border-radius: 5px;;
+    border-radius: 5px;
     font-size: 16px;
     display: block;
     width: 100%;

@@ -2,7 +2,8 @@ import React from "react"
 
 const Contact = props => (
   <section id="contact-form">
-    <span style={{ marginBottom: 60, display: "block" }}>Contact Us</span>
+    <span style={{ marginBottom: 60, display: "block" }}>Let's Talk</span>
+    <p>Fill out the contact form and tell us about your project</p>
     <form
       name="contact"
       method="post"

@@ -17,12 +17,16 @@
     text-transform: uppercase;
     color: $primaryColor;
     &:nth-of-type(1) {
-      font-size: 3em;
+      @include font(30px, 1em);
       margin-bottom: 20px;
-      // line-height: 1em;
+      max-width: 400px;
+      @include media($tablet) {
+        @include font(40px, 1em);
+      }
     }
     &:nth-of-type(2) {
       font-size: 1.1em;
+      max-width: 500px;
     }
   }
 }
@@ -48,4 +52,11 @@
     }
   }
 }
-// 
+
+.home-services {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  @include media($tablet) {
+    display: flex;
+  }
+}
