@@ -20,7 +20,7 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   {
-    allWordpressPage(filter: { slug: { eq: "home-new" } }) {
+    allWordpressPage(filter: { slug: { eq: "about" } }) {
       edges {
         node {
           id
