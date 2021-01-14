@@ -14,7 +14,7 @@ module.exports = {
   },
   plugins: [
     {
-      // Google Fonts 
+      // Google Fonts
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
@@ -100,8 +100,9 @@ module.exports = {
         // Search and Replace Urls across WordPress content.
         searchAndReplaceContentUrls: {
           sourceUrl: "https://asburymediagroup.com",
-          replacementUrl: "http://localhost:8000",
-          // replacementUrl: "https://peaceful-lichterman-a07c3f.netlify.app/",
+          // replacementUrl: "http://localhost:8000",
+          // ACTIVATE THIS FOR PRODUCTION BUILD
+          replacementUrl: "https://peaceful-lichterman-a07c3f.netlify.app/",
         },
         // Set how many simultaneous requests are sent at once.
         concurrentRequests: 10,
